@@ -16,6 +16,7 @@ setTimeout(function(){
     
 },6000)
 function preload() {
+  // http://46.105.122.141:9676/;stream.nsv&error=ok
     mySound = loadSound('./assets/s2.mp3');
   }
 function setup() {
