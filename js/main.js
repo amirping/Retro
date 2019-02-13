@@ -3,7 +3,7 @@ setTimeout(function(){
     const grenny = document.getElementById("greeny");
     grenny.classList.add('on')
     screen.classList.add('on');
-    const tabWords = ["it's","Art","Weirdo","Crazy","Freiknes","Deep","Lovnes"];
+    const tabWords = ["it's","Art","Weirdo","Crazy","Deep"];
     const placeTxt = document.getElementById("gk");
     let indec = 0;
     setInterval(function(){
@@ -52,4 +52,9 @@ function draw() {
 function mouseMoved() {
     var panning = map(mouseX, 0., width,-1.0, 1.0);
     mySound.pan(panning);
+  }
+  function touchStarted() {
+    if (getAudioContext().state !== 'running') {
+      getAudioContext().resume();
+    }
   }
